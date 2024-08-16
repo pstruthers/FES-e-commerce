@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://kit.fontawesome.com/7b96a85829.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7b96a85829.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <section id="landing">
@@ -14,21 +18,45 @@
           <img src="./assets/Library.svg" class="logo" alt="" />
           <ul class="nav__links">
             <li><a href="#" class="nav__link">Home</a></li>
-            <li><a href="#" class="nav__link">Contact</a></li>
-            <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
+            <li><a class="nav__link no-cursor">Contact</a></li>
+            <li><a href="#features" class="nav__link nav__link--primary">Books</a></li>
           </ul>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+              </li>
+              <li class="menu__list">
+                <a href="#features" class="menu__link" onclick="closeMenu()">Books</a>
+              </li>
+              <li class="menu__list">
+                <a class="menu__link no-cursor" onclick="closeMenu()">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <header>
         <div class="header__container">
-            <div class="header__description">
-                <h1 class="text--purple">America's most awarded online library platform</h1>
-                <h2>Find your dream book with <span class="text--purple">Library</span></h2>
-                <button class="header__button">Browse books</button>
-            </div>
-            <figure class="header__img--wrapper">
-                <img src="./assets/Undraw_Books.svg" alt="">
-            </figure>
+          <div class="header__description">
+            <h1 class="text--purple">
+              America's most awarded online library platform
+            </h1>
+            <h2>
+              Find your dream book with
+              <span class="text--purple">Library</span>
+            </h2>
+            <a href="#features"><button class="browse__button">Browse books</button></a>
+          </div>
+          <figure class="header__img--wrapper">
+            <img src="./assets/Undraw_Books.svg" alt="" />
+          </figure>
         </div>
       </header>
     </section>
@@ -36,28 +64,36 @@
       <section id="highlights">
         <div class="container">
           <div class="row">
-            <h2 class="section__title">Why choose <span class="text--purple">Library?</span></h2>
+            <h2 class="section__title">
+              Why choose <span class="text--purple">Library?</span>
+            </h2>
             <div class="highlight__wrapper">
               <div class="highlight">
                 <div class="highlight__img">
                   <i class="fa-solid fa-bolt-lightning"></i>
                 </div>
                 <h3 class="highlight__subtitle">Easy and Quick</h3>
-                <p class="highlight__para">Get access to books instantly after purchase.</p>
+                <p class="highlight__para">
+                  Get access to books instantly after purchase.
+                </p>
               </div>
               <div class="highlight">
                 <div class="highlight__img">
                   <i class="fa-solid fa-book-open"></i>
                 </div>
                 <h3 class="highlight__subtitle">10,000+ Books</h3>
-                <p class="highlight__para">Library has books in all your favorite categories.</p>
+                <p class="highlight__para">
+                  Library has books in all your favorite categories.
+                </p>
               </div>
               <div class="highlight">
                 <div class="highlight__img">
                   <i class="fa-solid fa-tags"></i>
                 </div>
                 <h3 class="highlight__subtitle">Affordable</h3>
-                <p class="highlight__para">Get your hands on popular books for as little as $10.</p>
+                <p class="highlight__para">
+                  Get your hands on popular books for as little as $10.
+                </p>
               </div>
             </div>
           </div>
@@ -66,18 +102,20 @@
       <section id="features">
         <div class="container">
           <div class="row">
-            <h2 class="section__title">Featured <span class="text--purple">Books</span></h2>
+            <h2 class="section__title">
+              Featured <span class="text--purple">Books</span>
+            </h2>
             <div class="books">
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/crack the coding interview.png" class="book__img" alt="">
+                  <img
+                    src="./assets/crack the coding interview.png"
+                    class="book__img"
+                    alt=""
+                  />
                 </figure>
-                <div class="book__title">
-                  Cracking the Coding Interview
-                </div>
-                <div class="book__author">
-                  Gayle Laakmann McDowell
-                </div>
+                <div class="book__title">Cracking the Coding Interview</div>
+                <div class="book__author">Gayle Laakmann McDowell</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -86,19 +124,20 @@
                   <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="book__price">
-                  <span class="book__price--normal">$39.95</span> <span class="book__price--actual">$35.95</span>
+                  <span class="book__price--normal">$39.95</span>
+                  <span class="book__price--actual">$35.95</span>
                 </div>
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/atomic habits.jpg" class="book__img" alt="">
+                  <img
+                    src="./assets/atomic habits.jpg"
+                    class="book__img"
+                    alt=""
+                  />
                 </figure>
-                <div class="book__title">
-                  Atomic Habits
-                </div>
-                <div class="book__author">
-                  James Clear
-                </div>
+                <div class="book__title">Atomic Habits</div>
+                <div class="book__author">James Clear</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -112,14 +151,14 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/david goggins.jpeg" class="book__img" alt="">
+                  <img
+                    src="./assets/david goggins.jpeg"
+                    class="book__img"
+                    alt=""
+                  />
                 </figure>
-                <div class="book__title">
-                  Can't Hurt Me
-                </div>
-                <div class="book__author">
-                  David Goggins
-                </div>
+                <div class="book__title">Can't Hurt Me</div>
+                <div class="book__author">David Goggins</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -128,19 +167,16 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <div class="book__price">
-                  <span class="book__price--normal">$29.95</span> <span class="book__price--actual">$22.95</span>
+                  <span class="book__price--normal">$29.95</span>
+                  <span class="book__price--actual">$22.95</span>
                 </div>
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/deep work.jpeg" class="book__img" alt="">
+                  <img src="./assets/deep work.jpeg" class="book__img" alt="" />
                 </figure>
-                <div class="book__title">
-                  Deep Work
-                </div>
-                <div class="book__author">
-                  Cal Newport
-                </div>
+                <div class="book__title">Deep Work</div>
+                <div class="book__author">Cal Newport</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -149,7 +185,8 @@
                   <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
                 <div class="book__price">
-                  <span class="book__price--normal">$24.95</span> <span class="book__price--actual">$12.95</span>
+                  <span class="book__price--normal">$24.95</span>
+                  <span class="book__price--actual">$12.95</span>
                 </div>
               </div>
             </div>
@@ -159,18 +196,16 @@
       <section id="latest">
         <div class="container">
           <div class="row">
-            <h2 class="section__title">Latest <span class="text--purple">Books</span></h2>
+            <h2 class="section__title">
+              Latest <span class="text--purple">Books</span>
+            </h2>
             <div class="books">
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/book-1.jpeg" class="book__img" alt="">
+                  <img src="./assets/book-1.jpeg" class="book__img" alt="" />
                 </figure>
-                <div class="book__title">
-                  The 10X Rule
-                </div>
-                <div class="book__author">
-                  Grant Cardone
-                </div>
+                <div class="book__title">The 10X Rule</div>
+                <div class="book__author">Grant Cardone</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -184,14 +219,10 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/book-2.jpeg" class="book__img" alt="">
+                  <img src="./assets/book-2.jpeg" class="book__img" alt="" />
                 </figure>
-                <div class="book__title">
-                  Be Obsessed or Be Average
-                </div>
-                <div class="book__author">
-                  Grant Cardone
-                </div>
+                <div class="book__title">Be Obsessed or Be Average</div>
+                <div class="book__author">Grant Cardone</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -205,14 +236,10 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/book-3.jpeg" class="book__img" alt="">
+                  <img src="./assets/book-3.jpeg" class="book__img" alt="" />
                 </figure>
-                <div class="book__title">
-                  Rich Dad Poor Dad
-                </div>
-                <div class="book__author">
-                  Robert T. Kiyosaki
-                </div>
+                <div class="book__title">Rich Dad Poor Dad</div>
+                <div class="book__author">Robert T. Kiyosaki</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -226,14 +253,10 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/book-4.jpeg" class="book__img" alt="">
+                  <img src="./assets/book-4.jpeg" class="book__img" alt="" />
                 </figure>
-                <div class="book__title">
-                  Rich Dad's Cashflow Quadrant
-                </div>
-                <div class="book__author">
-                  Robert T. Kiyosaki
-                </div>
+                <div class="book__title">Rich Dad's Cashflow Quadrant</div>
+                <div class="book__author">Robert T. Kiyosaki</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -247,14 +270,10 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/book-5.jpeg" class="book__img" alt="">
+                  <img src="./assets/book-5.jpeg" class="book__img" alt="" />
                 </figure>
-                <div class="book__title">
-                  The 48 Laws of Power
-                </div>
-                <div class="book__author">
-                  Robert Greene
-                </div>
+                <div class="book__title">The 48 Laws of Power</div>
+                <div class="book__author">Robert Greene</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -267,14 +286,10 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/book-6.jpeg" class="book__img" alt="">
+                  <img src="./assets/book-6.jpeg" class="book__img" alt="" />
                 </figure>
-                <div class="book__title">
-                  The 5 Second Rule
-                </div>
-                <div class="book__author">
-                  Mel Robbins
-                </div>
+                <div class="book__title">The 5 Second Rule</div>
+                <div class="book__author">Mel Robbins</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -287,14 +302,10 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/book-7.jpg" class="book__img" alt="">
+                  <img src="./assets/book-7.jpg" class="book__img" alt="" />
                 </figure>
-                <div class="book__title">
-                  Your Next Five Moves
-                </div>
-                <div class="book__author">
-                  Patrick Bet-David
-                </div>
+                <div class="book__title">Your Next Five Moves</div>
+                <div class="book__author">Patrick Bet-David</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -308,14 +319,10 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img src="./assets/book-8.jpeg" class="book__img" alt="">
+                  <img src="./assets/book-8.jpeg" class="book__img" alt="" />
                 </figure>
-                <div class="book__title">
-                  Mastery
-                </div>
-                <div class="book__author">
-                  Robert Greene
-                </div>
+                <div class="book__title">Mastery</div>
+                <div class="book__author">Robert Greene</div>
                 <div class="book__rating">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -331,6 +338,40 @@
           </div>
         </div>
       </section>
+      <section id="explore">
+        <div class="container">
+          <div class="row row__column">
+            <h2 class="section__title">
+              Explore more <span class="text--purple">Books</span>
+            </h2>
+            <a href="#features">
+              <button class="browse__button">Browse books</button>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="container">
+        <div class="row row__column">
+          <a href="#">
+            <figure class="footer__logo">
+              <img
+                src="./assets/Library.svg"
+                class="footer__logo--img"
+                alt=""
+              />
+            </figure>
+          </a>
+          <div class="footer__links">
+            <a href="#" class="footer__link">Home</a>
+            <a class="footer__link no-cursor">About</a>
+            <a href="#features" class="footer__link">Books</a>
+            <a class="footer__link no-cursor">Contact</a>
+          </div>
+          <div class="footer__copyright">Copyright &copy; 2024 Library</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
